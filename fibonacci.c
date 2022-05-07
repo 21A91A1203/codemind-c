@@ -1,15 +1,26 @@
-#include<stdio.h>    
-int main()    
-{    
- int n1=0,n2=1,n3,i,number;    
- scanf("%d",&number);    
- printf("%d %d",n1,n2);    
- for(i=2;i<number;++i)    
- {    
-  n3=n1+n2;    
-  printf(" %d",n3);    
-  n1=n2;    
-  n2=n3;    
- }  
-  return 0;  
- }
+#include<stdio.h>
+int fibonacci(int n)
+{
+    if(n==0)
+    {
+        return 0;
+    }
+    else if(n==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return(fibonacci(n-1)+fibonacci(n-2));
+    }
+}
+int main()
+{
+    int n,i,res;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        res=fibonacci(i);
+        printf("%d ",res);
+    }
+}
