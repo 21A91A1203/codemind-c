@@ -1,29 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int arr[100],i,n,m=0,c=0;
     scanf("%d",&n);
-    int a[n],i,j,c=0;
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
     for(i=0;i<n;i++)
     {
-        if(a[i]%2!=0)
+        if(arr[i]%2!=0)
         {
+            m++;
             if(i%2!=0)
             {
-                c=0;
-            }
-            else
-            {
-                c=1;
-                break;
+                c++;
             }
         }
     }
-    if(c!=1)
+    if(m==c)
     {
         printf("True");
     }
