@@ -1,30 +1,33 @@
 #include<stdio.h>
 int main()
 {
-    int i,j,m,n,max=0;
-    int matrix[100][200];
-    int sumR,sumC;
-    scanf("%d",&m);
-    scanf("%d",&n);
-    for(i=0;i<m;i++)
-    {
-        for(j=0;j<n;j++)
-        {
-            scanf("%d",&matrix[i][j]);
-        }
-    }
-    for(i=0;i<m;i++)
-    {
-        int sumC=0;
-        for(j=0;j<n;j++)
-        {
-            sumC+=matrix[i][j];
-        }
-        if(sumC>max)
-        {
-            max=sumC;
-        }
-    }
-    printf("%d",max);
-    return 0;
+	int i,j,k,r,a[10][10],c,sum,res=0,max=0;
+	scanf("%d%d",&r,&c);
+//	scanf("%d%d",&r2,&c2);
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	for(i=0;i<r;i++)
+	{
+	    sum=0;
+	    //max=0;
+		for(j=0;j<c;j++)
+		{
+		   
+		       sum=sum+a[i][j];
+		}
+		//printf("%d ",sum);
+		if(sum>max)
+		{
+		    max=sum;
+		}
+		
+	}
+	printf("%d",max);
+	
 }
+	
